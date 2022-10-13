@@ -6,7 +6,7 @@
     [checked]="isAllTodosSelected$ | async"
     (change)="toggleAllTodos($event)"
   />
-  <label for="toggle-all">Mark all as completed</label>
+  <label for="toggle-all">Marque todas as tarefas como completas</label>
   <ul class="todo-list">
     <app-todos-todo
       *ngFor="let todo of visibleTodos$ | async"

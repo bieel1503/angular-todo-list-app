@@ -20,7 +20,12 @@ export class FooterComponent {
       map((todos) => todos.filter((todo) => !todo.isCompleted).length)
     );
     this.itemLeftText$ = this.activeCount$.pipe(
-      map((activeCount) => `item${activeCount !== 1 ? 's' : ''} left`)
+      map(
+        (activeCount) =>
+          `item${activeCount !== 1 ? 's' : ''} ativo${
+            activeCount !== 1 ? 's' : ''
+          }`
+      )
     );
     this.noTodosClass$ = this.todosService.todos$.pipe(
       map((todos) => todos.length === 0)

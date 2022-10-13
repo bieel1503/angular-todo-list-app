@@ -9,7 +9,7 @@
         href="/"
         [ngClass]="{ selected: (filter$ | async) === filterEnum.all }"
         (click)="changeFilter($event, filterEnum.all)"
-        >All</a
+        >Todos</a
       >
     </li>
     <li>
@@ -17,7 +17,7 @@
         href="/"
         [ngClass]="{ selected: (filter$ | async) === filterEnum.active }"
         (click)="changeFilter($event, filterEnum.active)"
-        >Active</a
+        >Ativos</a
       >
     </li>
     <li>
@@ -25,7 +25,7 @@
         href="/"
         [ngClass]="{ selected: (filter$ | async) === filterEnum.completed }"
         (click)="changeFilter($event, filterEnum.completed)"
-        >Completed</a
+        >Completos</a
       >
     </li>
   </ul>
@@ -34,6 +34,6 @@
     (click)="clearCompleted()"
     [ngClass]="{ hidden: showClearCompleted$ | async }"
   >
-    Clear completed
+    Remover Completos
   </button>
 </footer>
