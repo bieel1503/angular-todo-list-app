@@ -65,4 +65,11 @@ export class TodosService {
     const updated = this.todos$.getValue().filter((todo) => todo.id !== id);
     this.todos$.next(updated);
   }
+
+  clearCompleted(): void {
+    const updated = this.todos$
+      .getValue()
+      .filter((todo) => todo.isCompleted === false);
+    this.todos$.next(updated);
+  }
 }

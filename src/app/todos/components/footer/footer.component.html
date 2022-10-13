@@ -29,4 +29,11 @@
       >
     </li>
   </ul>
+  <button
+    class="clear-completed"
+    (click)="clearCompleted()"
+    [ngClass]="{ hidden: showClearCompleted$ | async }"
+  >
+    Clear completed
+  </button>
 </footer>
