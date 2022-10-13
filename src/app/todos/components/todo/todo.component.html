@@ -6,7 +6,13 @@
       [checked]="todoProps.isCompleted"
       (change)="toggleTodo()"
     />
-    <label (dblclick)="setTodoInEditMode()">{{ todoProps.text }}</label>
+    <label
+      (dblclick)="setTodoInEditMode()"
+      [ngStyle]="{
+        'text-decoration-line': todoProps.isCompleted ? 'line-through' : 'null'
+      }"
+      >{{ todoProps.text }}</label
+    >
     <button class="destroy" (click)="removeTodo()"></button>
   </div>
   <ng-container *ngIf="isEditingProps">
